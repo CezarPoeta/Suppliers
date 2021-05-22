@@ -80,7 +80,7 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sysfinanctrl',
+        'NAME': 'PersonalFinance',
         'USER': 'cpoeta',
         'PASSWORD': '@58415433P',
         'HOST': 'localhost',
