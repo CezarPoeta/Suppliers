@@ -1,3 +1,8 @@
 from django.contrib import admin
+from django.contrib.admin.decorators import register
 
-# Register your models here.
+from .models import Tbbeneficiarios
+
+@admin.register(Tbbeneficiarios)
+class TbbeneficiariosAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
