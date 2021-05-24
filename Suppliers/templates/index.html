@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div class="row">
+    <h1>Beneficiários</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for beneficiario in supliers %}
+            <tr>
+                <td>{{ beneficiario.id }}</td>
+                <td>{{ beneficiario.nome }}</td>
+                <td>
+                    <a class="btn btn-warning" href="{% url 'upd_beneficiario' beneficiario.pk %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'del_beneficiario' beneficiario.pk %}">Deletar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
