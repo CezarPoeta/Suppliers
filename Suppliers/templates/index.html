@@ -14,17 +14,18 @@
             </tr>
         </thead>
         <tbody>
-            {% for beneficiario in supliers %}
+            {% for p in page_obj %}
             <tr>
-                <td>{{ beneficiario.id }}</td>
-                <td>{{ beneficiario.nome }}</td>
+                <td>{{ p.id }}</td>
+                <td>{{ p.nome }}</td>
                 <td>
-                    <a class="btn btn-warning" href="{% url 'upd_beneficiario' beneficiario.pk %}">Editar</a>
-                    <a class="btn btn-danger" href="{% url 'del_beneficiario' beneficiario.pk %}">Deletar</a>
+                    <a class="btn btn-warning" href="{% url 'upd_beneficiario' p.pk %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'del_beneficiario' p.pk %}">Deletar</a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+    {% include 'paginacao.html' %}
 </div>
 {% endblock %}

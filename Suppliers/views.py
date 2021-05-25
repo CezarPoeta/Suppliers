@@ -6,9 +6,11 @@ from django.urls import reverse_lazy
 from .models import Tbbeneficiarios
 
 
-class IndexView(ListView):
-    models = Tbbeneficiarios
+class IndexListView(ListView):
     template_name = 'index.html'
+    model = Tbbeneficiarios
+    paginate_by = 15
+    ordering = 'nome'
     queryset = Tbbeneficiarios.objects.all()
     context_object_name = 'supliers' 
 
