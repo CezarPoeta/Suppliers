@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div class="row">
+    <h1>Beneficiários</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in page_obj %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.nome }}</td>
+                <td>
+                    <a class="btn btn-warning" href="{% url 'upd_beneficiario' p.pk %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'del_beneficiario' p.pk %}">Deletar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% include 'paginacao.html' %}
+</div>
+{% endblock %}
