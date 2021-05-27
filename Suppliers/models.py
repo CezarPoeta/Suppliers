@@ -1,5 +1,8 @@
+from collections import UserList
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.http import request
+
 
 class Base(models.Model):
     useradm = models.ForeignKey(get_user_model(), verbose_name="UserAdm", on_delete=models.CASCADE)

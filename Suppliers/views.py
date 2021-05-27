@@ -33,8 +33,9 @@ class IndexListView(ListView):
 class CreateBeneficiarioView(CreateView):    
     model = Tbbeneficiarios
     template_name = 'fBeneficiarios.html'
-    fields = ['useradm','nome']
+    fields = ['nome',]
     success_url = reverse_lazy('index')
+
 
     """
     Esta lógica está dentro do CreateView, é herança do BaseCreateView, Trouxe para o código e fiz as alterações
@@ -44,14 +45,15 @@ class CreateBeneficiarioView(CreateView):
         if str(request.user) == 'AnonymousUser':
             return redirect('index')
         else:
+            print(dir(request))
+
             self.object = None
             return super().get(request, *args, **kwargs)
-
     
 class UpdateBeneficiarioView(UpdateView):
     model = Tbbeneficiarios
     template_name = 'fBeneficiarios.html'
-    fields = ['nome']
+    fields = ['nome',]
     success_url = reverse_lazy('index')  
 
 
