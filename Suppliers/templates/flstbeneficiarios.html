@@ -3,39 +3,33 @@
 
 {% block content %}
 
-<div class="container pt-2">
+<div class="container">
     <h1>Beneficiários</h1>
-</div>
-
-<div class="container pt-3">
     <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo Beneficiário</a>
-</div>
+    <br><br>
 
-<div class="container pt-2">
-    <div class="row">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nome</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for p in page_obj %}
-                <tr>
-                    <td>{{ p.id }}</td>
-                    <td>{{ p.nome }}</td>
-                    <td>
-                        <a class="btn btn-warning" href="{% url 'upd_beneficiario' p.pk %}">Editar</a>
-                        <a class="btn btn-danger" href="{% url 'del_beneficiario' p.pk %}">Deletar</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        {% include 'paginacao.html' %}
-    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in page_obj %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.nome }}</td>
+                <td>
+                    <a class="btn btn-warning" href="{% url 'upd_beneficiario' p.pk %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'del_beneficiario' p.pk %}">Deletar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% include 'paginacao.html' %}
 </div>
 
 {% endblock %}
