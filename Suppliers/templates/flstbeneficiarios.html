@@ -22,8 +22,8 @@
                 <td>{{ p.id }}</td>
                 <td>{{ p.nome }}</td>
                 <td>
-                    <a class="btn btn-warning" href="{% url 'upd_beneficiario' p.pk %}">Editar</a>
-                    <a class="btn btn-danger" href="{% url 'del_beneficiario' p.pk %}">Deletar</a>
+                    <a class="btn btn-warning btn-sm" href="{% url 'upd_beneficiario' p.pk %}">Editar</a>
+                    <a class="btn btn-danger btn-sm" href="{% url 'del_beneficiario' p.pk %}">Deletar</a>
                 </td>
             </tr>
             {% endfor %}
