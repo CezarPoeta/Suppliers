@@ -23,7 +23,7 @@ class IndexView(TemplateView):
 
 class IndexListView(ListView):
     model = Tbbeneficiarios
-    template_name = 'flstbeneficiarios.html'
+    template_name = 'lst_Beneficiarios.html'
     paginate_by = 15
     ordering = '-id'
     queryset = Tbbeneficiarios.objects.all()
@@ -32,7 +32,7 @@ class IndexListView(ListView):
 
 class CreateBeneficiarioView(CreateView):    
     model = Tbbeneficiarios
-    template_name = 'fBeneficiarios.html'
+    template_name = 'man_Beneficiarios.html'
     fields = ['nome',]
     success_url = reverse_lazy('lst_beneficiarios')
     """
@@ -56,12 +56,12 @@ class CreateBeneficiarioView(CreateView):
 
 class UpdateBeneficiarioView(UpdateView):
     model = Tbbeneficiarios
-    template_name = 'fBeneficiarios.html'
+    template_name = 'man_Beneficiarios.html'
     fields = ['nome',]
     success_url = reverse_lazy('lst_beneficiarios')  
 
 
 class DeleteBeneficiarioView(DeleteView):
     model = Tbbeneficiarios
-    template_name = 'fdel-Beneficiarios.html'
+    template_name = 'del-Beneficiarios.html'
     success_url = reverse_lazy('lst_beneficiarios')  

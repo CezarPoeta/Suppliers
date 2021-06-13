@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
-{% load humanize %}
 
 {% block content %}
 
-<div class="container">
+<div class="container" id="customers">
     <h1>Beneficiários</h1>
     <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo Beneficiário</a>
-    <br><br>
-
-    <table class="table table-striped">
+    <a class="btn btn-warning" href="{% url 'index' %}">Retornar</a> <br><br>
+    <table class="table table-hover mytable ">
         <thead>
             <tr>
                 <th>#</th>
@@ -22,13 +20,13 @@
                 <td>{{ p.id }}</td>
                 <td>{{ p.nome }}</td>
                 <td>
-                    <a class="btn btn-warning btn-sm" href="{% url 'upd_beneficiario' p.pk %}">Editar</a>
-                    <a class="btn btn-danger btn-sm" href="{% url 'del_beneficiario' p.pk %}">Deletar</a>
+                    <a class="" href="{% url 'upd_beneficiario' p.pk %}">Alt</a>
+                    <a class="" href="{% url 'del_beneficiario' p.pk %}">Del</a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
-    </table>
+    </table><br>
     {% include 'paginacao.html' %}
 </div>
 
