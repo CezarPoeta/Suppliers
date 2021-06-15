@@ -2,33 +2,39 @@
 {% block content %}
 
 <div class="container" id="style_beneficiarios">
-    <h1>Beneficiários</h1>
-    <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo Beneficiário</a>
-    <a class="btn btn-secondary" href="{% url 'index' %}">Retornar</a>
 
-    <table class="mytable ">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for p in page_obj %}
-            <tr>
-                <td>{{ p.id }}</td>
-                <td>{{ p.nome }}</td>
-                <td>
-                    <a class="" href="{% url 'upd_beneficiario' p.pk %}">Alt</a>
-                    <a class="" href="{% url 'del_beneficiario' p.pk %}">Del</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    {% include 'paginacao.html' %}
+    <div id="Grafico1">
+        <h1>Beneficiários</h1>
+    </div>
+    <div id="Grafico2">
+        <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo Beneficiário</a>
+        <a class="btn btn-secondary" href="{% url 'index' %}">Retornar</a>
+    
+        <table class="mytable ">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in page_obj %}
+                <tr>
+                    <td>{{ p.id }}</td>
+                    <td>{{ p.nome }}</td>
+                    <td>
+                        <a class="" href="{% url 'upd_beneficiario' p.pk %}">Alt</a>
+                        <a class="" href="{% url 'del_beneficiario' p.pk %}">Del</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        {% include 'paginacao.html' %}
+    
+    </div>
 </div>
 
 {% endblock %}

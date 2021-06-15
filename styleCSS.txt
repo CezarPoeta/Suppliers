@@ -1,0 +1,306 @@
+/* Definições Gerais de CSS*/
+
+/* Parametrização DIVs principais */
+/*--------------------------------*/
+/*Altera a cor de fundo da tela*/
+body {background-color: rgb(132, 132, 252);}
+
+div#titulos {
+	position: fixed;
+	top: 10px;
+	left: 15px;
+    width: 600px;
+    height: 100px;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px black;
+	padding: 10px 10px 10px 10px;
+}
+
+div#titulo2 {
+	position: fixed;
+    top: 10px;
+	left: 650px;
+    width: 1220px;
+    height: 100px;
+	background-color: rgb(226, 213, 231);
+	padding: 10px 10px 10px 10px;
+}
+
+/* Graficos da tela*/
+div#Grafico1 {
+	position: fixed;
+	top: 450px;
+	left: 15px;
+    width: 600px;
+    height: 450px;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px black;
+	padding: 10px 10px 10px 10px;
+}
+
+div#Grafico2 {
+	position: absolute;
+    top: 10px;
+	left: 650px;
+    width: 1220px;
+    height: 1839px;
+	background-color: rgb(226, 213, 231);
+	padding: 10px 10px 10px 10px;
+}
+
+/* Parametrização TITULOS e HEADER*/
+header#cabecalho h1 {
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+	position: absolute;
+	top: 70px;
+	left: 150px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 30px;
+	color: #888888;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-top: 0px;
+}
+
+/* Parametrização MENU PRINCIPAL */
+div#menuP {
+	position: fixed;
+	top: 140px;
+	left: 15px;
+    width: 600px;
+    height: 280px;
+	background-color: white;
+	box-shadow: 0px 0px 10px black;
+	padding: 10px 10px 10px 10px;
+	font-family: Arial, sans-serif;
+}
+
+/*==============================================================================================================================*/
+
+/* Formatação Menu*/
+nav#menu {
+	display: block;
+}
+
+nav#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+nav#menu li {
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px;
+	transition: background-color 1s;
+}
+
+nav#menu li:hover {
+	background-color: #606060;
+}
+
+nav#menu h1 {
+	display: none;
+}
+
+nav#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu a:hover {
+	color:#ffffff;
+	text-decoration: underline;
+}
+
+/* Formatação Menu*/
+nav#menu1 {
+	display: block;
+}
+
+nav#menu1 ul{
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: 10px;
+	left: 300px;
+}
+
+nav#menu1 li {
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px;
+	transition: background-color 1s;
+}
+
+nav#menu1 li:hover {
+	background-color: #606060;
+}
+
+nav#menu1 h1 {
+	display: none;
+}
+
+nav#menu1 a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu1 a:hover {
+	color:#ffffff;
+	text-decoration: underline;
+}
+
+/*==============================================================================================================================*/
+/* Parametrização FORMS*/
+div#frm{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 622px;
+    height: 775px;
+    border:1px solid rgb(5, 5, 32);    
+    background-color:rgb(172, 171, 171);
+}
+  
+fieldset#dados {
+    position: absolute;
+    top: 0px;
+    left: 590px;
+    height: 140px;
+    width: 474px;
+    border:1px solid rgb(5, 5, 32);    
+    border-color: #2e0505;
+    background: url("../_imagens/icone-contato.png") no-repeat 95% 15%;
+    background-color: rgb(212, 212, 201);
+}
+
+label {
+    font-weight:bold;
+    font-size: 18px;
+}
+
+input {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 17px;    
+}
+
+legend{
+    text-align:right;
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #141313;
+}
+
+/*==============================================================================================================================*/
+
+/* Parametrização BOTÕES */
+/* Botão Input Incluir*/
+button.btn-incluir {
+    width: 100px;
+    height: 27px;
+    background: rgb(27, 27, 117);
+    color: rgb(216, 191, 191);
+}
+
+/* Botão Input Salvar*/
+button.btn-salvar {
+    width: 100px;
+    height: 27px;
+    background: blue;
+    color: white;
+}
+
+/* Botão Input Excluir*/
+button.btn-excluir {
+    width: 100px;
+    height: 27px;
+    background: red;
+    color: white;
+}
+
+/* Botão Input Editar*/
+button.btn-editar {
+    width: 100px;
+    height: 27px;
+    background: green;
+    color: yellow;
+}
+
+/* Botão Voltar*/
+button.btn-cancelar {
+    width: 100px;
+    height: 27px;
+    background: rgb(163, 162, 162);
+    color: rgb(31, 29, 29);
+}
+
+/* Botão Pesquisar*/
+button.btn-chamar {
+    width: 100px;
+    height: 27px;
+    background: gray;
+    color: white;
+}
+
+/* Botão Pesquisar*/
+button.btn-pesquisar {
+    width: 100px;
+    height: 27px;
+    background: gray;
+    color: white;
+}
+
+/*==============================================================================================================================*/
+
+/* Parametrização TABLEs */
+table#tabela {
+    position: absolute;
+    top: 200px;
+    left: 7px;
+    width: 500px;
+    border: 1px solid black;    /*cria borda na tabela*/
+    border-collapse: collapse;   /*altera o aspecto da borda*/
+    padding: 3px 10px;
+    background: white;
+    cursor: pointer;
+}
+
+td{
+    border: 1px solid black;    /*cria borda na tabela*/
+    border-collapse: collapse;   /*altera o aspecto da borda*/
+    padding: 2px 10px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+th{
+    background: darkgrey;
+    color: black;
+    text-align: left;
+    border: 1px solid black;    /*cria borda na tabela*/
+    border-collapse: collapse;   /*altera o aspecto da borda*/
+    padding: 2px 10px;
+}
+
+tr:hover{
+    color: yellow;
+    background-color: red;
+}
+
+tr {transition:all .25s ease-in-out}
