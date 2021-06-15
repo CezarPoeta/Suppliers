@@ -24,7 +24,7 @@ class IndexView(TemplateView):
 class IndexListView(ListView):
     model = Tbbeneficiarios
     template_name = 'lst_Beneficiarios.html'
-    paginate_by = 15
+    paginate_by = 18
     ordering = '-id'
     queryset = Tbbeneficiarios.objects.all()
     context_object_name = 'supliers' 
