@@ -1,0 +1,36 @@
+  
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+#customers tr:hover {background-color: rgb(180, 175, 175);}
+  
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  height: 50px;
+  background-color: #0704aa;
+  color: rgb(215, 236, 176);
+
+}
+  
+#customers {
+  border-collapse: collapse;
+}
+
+body {
+    background-color: rgb(219, 236, 236);
+}
+
+.mytable {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    font-weight: bolder;
+    border-color: darkblue;
+    width: 50%;
+
+}

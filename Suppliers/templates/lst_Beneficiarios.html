@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
 <div class="container" id="customers">
-    <h1>Beneficiários</h1>
     <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo Beneficiário</a>
-    <a class="btn btn-warning" href="{% url 'index' %}">Retornar</a> <br><br>
-    <table class="table table-hover mytable ">
+    <a class="btn btn-secondary" href="{% url 'index' %}">Retornar</a>
+
+    <table class="mytable ">
         <thead>
             <tr>
                 <th>#</th>
@@ -26,7 +25,8 @@
             </tr>
             {% endfor %}
         </tbody>
-    </table><br>
+    </table>
+
     {% include 'paginacao.html' %}
 </div>
 
