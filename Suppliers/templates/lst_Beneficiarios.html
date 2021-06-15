@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <div class="container" id="style_beneficiarios">
-
     <div id="Grafico1">
         <h1>Beneficiários</h1>
-    </div>
-    <div id="Grafico2">
-        <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo Beneficiário</a>
-        <a class="btn btn-secondary" href="{% url 'index' %}">Retornar</a>
-    
-        <table class="mytable ">
+        <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo</a>
+        <a class="btn btn-secondary" href="{% url 'index' %}"><img src="{% static '/images/icone-contato.png' %}" alt=""></a>
+
+        <table class="mytable">
             <thead>
                 <tr>
                     <th>#</th>
@@ -31,9 +29,8 @@
                 {% endfor %}
             </tbody>
         </table>
-    
+
         {% include 'paginacao.html' %}
-    
     </div>
 </div>
 

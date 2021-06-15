@@ -32,7 +32,7 @@ class IndexListView(ListView):
 
 class CreateBeneficiarioView(CreateView):    
     model = Tbbeneficiarios
-    template_name = 'man_Beneficiarios.html'
+    template_name = 'frm_Beneficiarios.html'
     fields = ['nome',]
     success_url = reverse_lazy('lst_beneficiarios')
     """
