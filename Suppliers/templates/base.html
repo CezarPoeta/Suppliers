@@ -11,9 +11,15 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    {% include 'navigation.html' %}
-
-    {% block content %}{% endblock %}
+    <div id="menuP">
+        {% include 'navigation.html' %}
+    
+        {% block content %}
+        <div id="Grafico1"></div>
+        <div id="Grafico2"></div>
+        
+        {% endblock %}
+    </div>
     
 {% bootstrap_javascript jquery='full' %}
 </body>

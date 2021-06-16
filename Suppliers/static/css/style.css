@@ -30,10 +30,10 @@ body {background-color: rgb(219, 236, 236);}
 /* Graficos da tela*/
 div#Grafico1 {
 	position: absolute;
-	top: 60px;
+	top: 80px;
 	left: 5px;
     width: 850px;
-    height: 700px;
+    height: 720px;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 10px black;
 	padding: 10px 10px 10px 10px;
@@ -41,11 +41,12 @@ div#Grafico1 {
 
 div#Grafico2 {
 	position: absolute;
-    top: 50px;
-	left: 650px;
-    width: 1220px;
-    height: 1839px;
-	background-color: rgb(226, 213, 231);
+    top: 80px;
+	left: 860px;
+    width: 840px;
+    height: 720px;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px black;
 	padding: 10px 10px 10px 10px;
 }
 
@@ -53,10 +54,10 @@ div#Grafico2 {
 /* Parametrização MENU PRINCIPAL */
 div#menuP {
 	position: fixed;
-	top: 140px;
-	left: 15px;
-    width: 600px;
-    height: 280px;
+	top: 5px;
+	left: 5px;
+    width: 1695px;
+    height: 70px;
 	background-color: white;
 	box-shadow: 0px 0px 10px black;
 	padding: 10px 10px 10px 10px;
