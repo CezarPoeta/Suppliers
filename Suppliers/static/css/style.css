@@ -4,20 +4,22 @@ body {background-color: rgb(219, 236, 236);}
     font-family: 'Courier New', Courier, monospace;
     font-size: 10pt;
     font-weight:bold;
-    border-color: darkblue;
-    width: 75%;
+    border-color: rgb(214, 214, 231);
+    width: 25%;
 }
- 
-#style_beneficiarios td, #style_beneficiarios th {
-    border: 1px solid rgb(161, 160, 160);
+
+
+.style_beneficiarios td, .style_beneficiarios th {
+    border: 1px solid rgb(214, 211, 211);
     padding: 4px;
 }
 
-#style_beneficiarios tr:nth-child(even){background-color: #faf4f4;}
 
-#style_beneficiarios tr:hover {background-color: rgb(132, 167, 221);}
+.style_beneficiarios tr:nth-child(even){background-color: #e0dede;}
+.style_beneficiarios tr:hover {background-color: rgb(130, 169, 236);}
 
-#style_beneficiarios th {
+
+.style_beneficiarios th {
     padding-top: 6px;
     padding-bottom: 6px;
     height: 25px;
@@ -28,22 +30,22 @@ body {background-color: rgb(219, 236, 236);}
   }
   
 /* Graficos da tela*/
-div#Grafico1 {
+#style_div_1 {
 	position: absolute;
 	top: 80px;
 	left: 5px;
-    width: 850px;
+    width: 1690px;
     height: 720px;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 10px black;
 	padding: 10px 10px 10px 10px;
 }
 
-div#Grafico2 {
+#style_div_2 {
 	position: absolute;
     top: 80px;
 	left: 860px;
-    width: 840px;
+    width: 835px;
     height: 720px;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 10px black;
@@ -52,13 +54,13 @@ div#Grafico2 {
 
 
 /* Parametrização MENU PRINCIPAL */
-div#menuP {
+#menuP {
 	position: fixed;
 	top: 5px;
 	left: 5px;
     width: 1695px;
     height: 70px;
-	background-color: white;
+	background-color: #ffffff;
 	box-shadow: 0px 0px 10px black;
 	padding: 10px 10px 10px 10px;
 	font-family: Arial, sans-serif;

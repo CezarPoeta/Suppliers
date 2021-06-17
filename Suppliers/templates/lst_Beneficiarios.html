@@ -2,39 +2,36 @@
 {% load static %}
 {% block content %}
 
-<div class="container" id="style_beneficiarios">
-    <div id="Grafico1">
-        <h1>Beneficiários</h1>
-        <a class="" href="{% url 'add_beneficiario' %}"><img src="{% static '/images/botaoincluir.gif' %}" alt=""></a>
-        <a class="" href="{% url 'index' %}"><img src="{% static '/images/botaocancela.gif' %}" alt=""></a>
+<div id="style_div_1" class="style_beneficiarios">
+    <a class="btn btn-primary" href="{% url 'add_beneficiario' %}">Novo Beneficiário</a>
+    <a class="btn btn-success" href="{% url 'index' %}">Sair</a>
 
-        <table class="mytable">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nome</th>
-                    <th>Ações</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for p in page_obj %}
-                <tr>
-                    <td>{{ p.id }}</td>
-                    <td>{{ p.nome }}</td>
-                    <td>
-                        <a class="" href="{% url 'upd_beneficiario' p.pk %}"> <img src="{% static '/images/botaoaltera.gif' %}" alt="">  </a>
-                    </td>
-                    <td>
-                        <a class="" href="{% url 'del_beneficiario' p.pk %}"> <img src="{% static '/images/botaoeliminar.gif' %}" alt=""> </a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <table class="mytable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in page_obj %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.nome }}</td>
+                <td>
+                    <a class="" href="{% url 'upd_beneficiario' p.pk %}"> <img
+                            src="{% static '/images/botaoaltera.gif' %}"></a>
 
-        {% include 'paginacao.html' %}
-    </div>
+                    <a class="" href="{% url 'del_beneficiario' p.pk %}"> <img
+                            src="{% static '/images/botaoeliminar.gif' %}"></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% include 'paginacao.html' %}
 </div>
 
 {% endblock %}
