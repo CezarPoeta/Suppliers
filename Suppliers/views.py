@@ -64,5 +64,5 @@ class UpdateBeneficiarioView(UpdateView):
 
 class DeleteBeneficiarioView(DeleteView):
     model = Tbbeneficiarios
-    template_name = 'del-Beneficiarios.html'
+    template_name = 'del_Beneficiarios.html'
     success_url = reverse_lazy('lst_beneficiarios')  
