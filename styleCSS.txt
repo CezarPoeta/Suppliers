@@ -304,3 +304,14 @@ tr:hover{
 }
 
 tr {transition:all .25s ease-in-out}
+
+
+
+
+/*JavaScript*/
+
+/*
+
+
+
+*/

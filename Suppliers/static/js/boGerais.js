@@ -33,31 +33,35 @@ document.addEventListener("keydown", function (event) {
         somaPat();
     };
 });
+
+
 //----------------------Controle Leitura do BD e Apresentação dos dados na Tabela ----------------- 
 function somaPat() {
     pat++;
     if (tll > tlg) {        // Total Registros > Total Linhas Grid
         if (pat > tlg){     // Se posição Atual for Maior que Total de linhas no grid
-            ctrIniPag++;
-            ctrFimPag++;           
-            ctrUltimaLinha = ctrFimPag + 1; //Controla paginação
+//            ctrIniPag++;
+//            ctrFimPag++;           
+//            ctrUltimaLinha = ctrFimPag + 1; //Controla paginação
 
-            if(ctrUltimaLinha > tll){
-                window.alert("Último Registro!")
-                ctrIniPag--;
-                ctrFimPag = tll;
-                ctrUltimaLinha = tll;
-            }
+//            if(ctrUltimaLinha > tll){
+//                window.alert("Último Registro!")
+//                ctrIniPag--;
+//                ctrFimPag = tll;
+//                ctrUltimaLinha = tll;
+//            }
             pat = tlg;
             pan = 0;
-            loadData();
+
+            selectRow(pan, pat);
+            pan = pat;
         }else {
             selectRow(pan,pat);                
             pan = pat;
         }
     } else {  // Total Registros < Total Linhas Grid
         if (pat >= tlg){   //Se posição Atual for Maior que Total de linhas no grid
-            window.alert("FOI ESTE - Último Registro!")
+            window.alert("Último Registro!")
             pat--;
             selectRow(pan,pat);
             pan = pat;
@@ -71,7 +75,11 @@ function somaPat() {
 
 function subtraiPat() {
     pat--;
-    if (tll - pat != 0){console.log(ctrIniPag)}
+
+//    if (tll - pat != 0){
+//        window.alert(ctrIniPag)
+//    }
+
     if (pat < 0){     //Se posição Atual for menor que zero
         ctrIniPag--;
         ctrFimPag--;
@@ -83,7 +91,11 @@ function subtraiPat() {
         }
         pat = 0;
         pan = 0;
-        loadData();
+
+        selectRow(pan, pat);
+        pan = pat;
+
+
     } else{
         selectRow(pan,pat);                
         pan = pat;    
@@ -108,7 +120,7 @@ function selectRow(ppan, ppat) {
 }
 
 
-function loadData() {
+//function loadData() {
     // Limpa a tableBody para atualização
 //    var iFim = tableBody.rows.length;
 //    for (var i = 0; i < iFim;i++) {
@@ -129,8 +141,8 @@ function loadData() {
    //                 tableBody.appendChild(novaTR);
    //             }
     //        }
-            selectRow(pan, pat);
-            pan = pat;
+//            selectRow(pan, pat);
+//            pan = pat;
     //    })
 //    })
-}
+//}
