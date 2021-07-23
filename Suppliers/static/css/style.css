@@ -14,10 +14,11 @@ body {background-color: rgb(219, 236, 236);}
     padding: 4px;
 }
 
-/*
+
 .style_beneficiarios tr:nth-child(even){background-color: #e0dede;}
+
 .style_beneficiarios tr:hover {background-color: rgb(130, 169, 236);}
-*/
+
 
 .style_beneficiarios th {
     padding-top: 6px;

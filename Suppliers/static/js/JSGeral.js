@@ -65,14 +65,19 @@ function subtraiPat() {
 //=======================Controle Seleção da Linha=================================================
 function selectRow(ppan, ppat) {
     //Altera a cor da TR Anterior para cor original
+
+    //.style_beneficiarios tr:nth-child(even){background-color: #e0dede;}
+    //.style_beneficiarios tr:hover {background-color: rgb(130, 169, 236);}
+    
+
     tableBody.rows[ppan].style.background = 'white';  
     tableBody.rows[ppan].style.color = 'black';
-    tableBody.rows[ppan].style.fontWeight = 'normal';
+//    tableBody.rows[ppan].style.fontWeight = 'normal';
 
     //Altera a cor da TR Atual para cor azul / amarelo
     tableBody.rows[ppat].style.background = 'yellow';  
     tableBody.rows[ppat].style.color = 'blue';
-    tableBody.rows[ppat].style.fontWeight = 'bold';
+//    tableBody.rows[ppat].style.fontWeight = 'bold';
 
     //Mostra dados no Form
     //document.querySelector("input[name='iId']").value = myTable.rows[ppat + 1].cells[0].innerHTML;
